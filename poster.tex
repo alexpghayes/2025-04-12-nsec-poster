@@ -1,5 +1,3 @@
-% printing information at UW-Madison: https://designlab.wisc.edu/resources/projects/posters/
-
 \PassOptionsToPackage{dvipsnames}{xcolor}
 \documentclass[final]{beamer}
 
@@ -7,18 +5,7 @@
 \usepackage{lmodern}
 
 % set poster dimensions below (in cm)
-% AFI / the posterboards at the Discovery Building are 46"x46".
-% 46" wide x 36" high (121.92 x 91.44 cm)
-% A0 for ASA WI Chapter, which is slightly smaller 84.1 x 118.9 (46.8 wide by 33.1 tall)
-% \usepackage[orientation=landscape, size=a0, scale=1]{beamerposter}
-
-% A0 margins + 0.5 cm bleed in each direction?
 \usepackage[orientation=landscape,width=119.9cm,height=85.1cm, scale=1]{beamerposter}
-
-% https://mirror.math.princeton.edu/pub/CTAN/macros/latex/contrib/crop/crop.pdf
-% \usepackage[width=119.9cm,height=85.1cm,noaxes,frame,lualatex,landscape,center]{crop}
-
-% \usepackage{geometry}
 
 \usetheme{gemini}
 \usecolortheme{mit}
@@ -193,7 +180,7 @@
                         \end{tikzpicture}
                     \end{minipage}
                 \end{figure}
-
+                \vspace{4mm}
                 \begin{equation*}
                     \begin{bmatrix}
                         Y_1 \\
@@ -202,13 +189,12 @@
                         Y_4
                     \end{bmatrix}
                     =
-                    \begin{bNiceMatrix}[first-row,first-col]
-                         &                         &      &   &                           \\
-                         & \textcolor{Mahogany}{1} & GY_1 & 1 & \textcolor{Mahogany}{3/4} \\
-                         & \textcolor{Mahogany}{1} & GY_2 & 0 & \textcolor{Mahogany}{3/4} \\
-                         & \textcolor{Mahogany}{1} & GY_3 & 1 & \textcolor{Mahogany}{3/4} \\
-                         & \textcolor{Mahogany}{1} & GY_4 & 1 & \textcolor{Mahogany}{3/4} \\
-                    \end{bNiceMatrix}
+                    \begin{bmatrix}
+                        \textcolor{Mahogany}{1} & GY_1 & 1 & \textcolor{Mahogany}{3/4} \\
+                        \textcolor{Mahogany}{1} & GY_2 & 0 & \textcolor{Mahogany}{3/4} \\
+                        \textcolor{Mahogany}{1} & GY_3 & 1 & \textcolor{Mahogany}{3/4} \\
+                        \textcolor{Mahogany}{1} & GY_4 & 1 & \textcolor{Mahogany}{3/4} \\
+                    \end{bmatrix}
                     \begin{bmatrix}
                         \textcolor{Mahogany}{\alpha} \\
                         \beta                        \\
@@ -352,20 +338,18 @@
 
             \end{block}
 
-            \begin{block}{Takeaways}
-                \vspace{6mm}
+            \begin{alertblock}{Takeaways}
+                \vspace{4mm}
                 \begin{enumerate}
                     \setlength\itemsep{1.5em}
                     \item It can be impossible to estimate peer effects using linear-in-means models, even when all parameters in the model are identified.
-                    \item It may be possible to identify peer effects and avoid colinearity issues by modelling homophily using random dot product graphs.
+                    \item Modeling homophily using random dot product graphs can help identify peer effects and avoid colinearity issues.
                 \end{enumerate}
-            \end{block}
+            \end{alertblock}
 
             \begin{block}{Want to learn more? Have a comment? Pre-print \& contact info}
                 \nocite{hayes2024c}
                 \printbibliography
-
-
                 \begin{columns}
                     \begin{column}{0.4\textwidth}
                         \begin{center}
